@@ -1,0 +1,300 @@
+/*
+COLOR PALETTE
+https://coolors.co/palette/1f2421-216869-49a078-9cc5a1-dce1de
+https://coolors.co/palette/6d4c3d-ad7a99-49a078-9cc5a1-f7d08a
+# Blackish Tones
+#1F2816 - black green
+#281626 - black violet
+#281C16 - black brown
+#281617 - black red
+#162228 - black blue
+
+# Dark Tones
+#334225 - dark green
+#6A3C65 - dark violet
+#6A4B3C - dark brown
+#6A3C3D - dark red
+#3C5C6A - dark blue
+
+# Main Tones
+#90B072 - green Olivine
+#B072A9 - African violet
+#B08672 - Beaver brown
+#B07274 - Old rose red
+#739DB0 - Air superiority blue
+#F7F7FF - Ghost white 
+
+# Light Tones
+#C0D2AF - light green
+#CCA5C8 - light violet
+#CCB1A5 - light brown
+#CCA5A6 - light red
+#A5C0CC - light blue
+
+# White
+#F7F7FF - Ghost white
+
+# Black
+#221D23 - Raisin black
+*/
+
+/*
+FONT FAMILIES
+font-family: 'Dancing Script', cursive;
+font-family: 'Dosis', sans-serif;
+*/
+
+:root {
+	/* Green */
+	--green: #90b072;
+	--green-dark: #334225;
+	--green-darker: #1f2816;
+	--green-light: #c0d2af;
+
+	/* Violet */
+	--violet: #b072a9;
+	--violet-dark: #6a3c65;
+	--violet-darker: #281626;
+	--violet-light: #cca5c8;
+
+	/* Brown */
+	--brown: #b08672;
+	--brown-dark: #6a4b3c;
+	--brown-darker: #281c16;
+	--brown-light: #cca5a6;
+
+	/* Red */
+	--red: #b07274;
+	--red-dark: #6a3c3d;
+	--red-darker: #281617;
+	--red-light: #cca5a6;
+
+	/* Blue */
+	--blue: #739db0;
+	--blue-dark: #3c5c6a;
+	--blue-darker: #162228;
+	--blue-light: #a5c0cc;
+
+	/* White */
+	--white: #f7f7ff;
+
+	/* Black */
+	--black: #221d23;
+}
+
+/* GLOBAL STYLES
+----------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	color: var(--green);
+	padding: 16px;
+	margin: 0;
+	padding: 0;
+	font-family: "Dosis", sans-serif;
+	font-size: 24px;
+	line-height: 1.5;
+}
+
+a {
+	color: var(--blue);
+}
+
+a:hover {
+	color: var(--blue-light);
+}
+
+img {
+	width: 300px;
+}
+
+h1 {
+	font-size: 92px;
+	line-height: 1;
+}
+
+h2 {
+	font-size: 48px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Dancing Script", cursive;
+	font-weight: 400;
+	margin: 0;
+}
+
+.content-wrap {
+	max-width: 1000px;
+	width: 75%;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+h3 {
+	margin-bottom: 0;
+}
+
+.item-details h3 + p {
+	font-style: italic;
+}
+
+.item-details h3 ~ p {
+	margin: 0;
+}
+
+.divider > section {
+	border-bottom: 1px dashed var(--blue-light);
+	padding: 25px 0px;
+}
+
+.divider > section:last-of-type {
+	border-bottom: none;
+}
+
+/* Profile
+----------------------------------------------*/
+header {
+	background: var(--brown-darker);
+}
+
+header img {
+	float: left;
+	margin-right: 20px;
+}
+
+/* Projects
+----------------------------------------------*/
+.projects {
+	color: var(--green-light);
+	background: var(--green-darker);
+}
+
+.projects a {
+	color: var(--blue);
+}
+
+.projects .btn {
+	color: var(--white);
+	background-color: var(--blue-dark);
+	text-decoration: none;
+	padding: 8px;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+.projects .btn:visited {
+	color: var(--white);
+}
+
+.projects .btn:focus {
+	outline: 2px solid var(--blue-dark);
+}
+
+.projects .btn:hover {
+	color: var(--black);
+	background: rgba(220, 225, 222, 80%);
+}
+
+.projects .btn:active {
+	color: var(--green-color);
+}
+
+.project-item {
+	overflow: hidden;
+}
+
+.project-item img {
+	margin-right: 20px;
+}
+
+.project-item h3 {
+	margin: 0;
+}
+
+/* Work Experience
+----------------------------------------------*/
+.work-experience {
+	background: var(--brown-darker);
+}
+
+/* Education
+----------------------------------------------*/
+.education {
+	color: var(--black);
+	background: var(--white);
+	background-image: url(../images/layered-waves-haikei.svg);
+	background-size: cover;
+	background-position: bottom;
+	padding-bottom: 100px;
+}
+
+.education p {
+	width: 80%;
+}
+
+/* Contact Info
+----------------------------------------------*/
+footer {
+	color: var(--white);
+	background: var(--black);
+}
+
+.contact-list {
+	list-style-type: none;
+	padding: 0;
+}
+
+.contact-list a {
+	padding: 0 15px;
+	display: inline-block;
+}
+
+/* Responsive
+----------------------------------------------*/
+@media screen and (min-width: 750px) {
+	.project-item img {
+		float: left;
+		margin-right: 20px;
+	}
+
+	.job-item {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		column-gap: 20px;
+	}
+	.contact-info {
+		text-align: center;
+	}
+	.contact-list {
+		display: flex;
+		justify-content: center;
+	}
+	header,
+	footer {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 749px) {
+	h1 {
+		font-size: 75px;
+		line-height: 0.9;
+		margin-bottom: 20px;
+	}
+
+	h2 {
+		font-size: 30px;
+	}
+}
